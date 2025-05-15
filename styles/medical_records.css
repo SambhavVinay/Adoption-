@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0d0d2b, #000000);
+    color: #eaeaea;
+    margin: 0;
+    padding: 2rem;
+    padding-bottom: 4rem; /* Prevent content hiding behind footer */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: nowrap;
+}
+
+.form-container {
+    background: linear-gradient(145deg, #000000, #1a1a3a);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #444;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 14px rgba(255, 255, 255, 0.08);
+    border-color: #ffffff;
+}
+
+.form-container h2 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1.2rem;
+    color: #ffffff;
+}
+
+.form-container form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container input[type="submit"] {
+    width: 90%;
+    padding: 0.9rem;
+    margin-bottom: 1.2rem;
+    background: linear-gradient(145deg, #000000, #1a1a3a);
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #eee;
+}
+
+input[type="submit"] {
+    background-color: #444;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+input[type="submit"]:hover {
+    background-color: #666;
+}
+
+.medical-list-container {
+    width: 65%;
+    height: 87vh;
+    overflow-y: auto;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-radius: 16px;
+    background: linear-gradient(145deg, #000000, #1a1a3a);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+    justify-content: flex-start;
+}
+
+.medical-card {
+    background: linear-gradient(145deg, #252547, #0d1b2a);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(255, 255, 255, 0.05);
+    min-width: 250px;
+    flex: 1 1 300px;
+    height: 250px;
+    transition: transform 0.2s ease, border-left 0.3s ease;
+    color: #eaeaea;
+}
+
+.medical-card:hover {
+    transform: translateY(-5px);
+    border-left: 6px solid #4db8ff;
+}
+
+.medical-id {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.05rem;
+    margin-bottom: 0.8rem;
+    color: #fff;
+}
+
+.medical-card p {
+    margin: 0.3rem 0;
+}
+
+.medical-card a {
+    color: #d0d0d0;
+    font-weight: bold;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+.medical-card a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: none;
+    border-top: 1px dashed #777;
+    margin: 2rem 0;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-container {
+        width: 80%;
+    }
+
+    .medical-list-container {
+        width: 100%;
+        height: auto;
+    }
+}
+
+footer {
+    font-size: 0.8rem;
+    font-style: italic;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    opacity: 100%;
+    color: #999;
+    background-color: transparent;
+    z-index: 10;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.7rem;
+    margin-top: 0.5rem;
+}
+
+.action-buttons a {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
+}
+
+.action-buttons a.edit-btn {
+    background: linear-gradient(145deg, #645b5b, #1a1a3a);
+    color: #ccc;
+}
+
+.action-buttons a.edit-btn:hover {
+    background-color: #666;
+    transform: scale(1.05);
+}
+
+.action-buttons a.delete-btn {
+    background-color: #222;
+    color: #ff6666;
+}
+
+.action-buttons a.delete-btn:hover {
+    background-color: #400;
+    transform: scale(1.05);
+}
+
+.form-container input[type="date"] {
+    width: 90%;
+    padding: 0.9rem;
+    margin-bottom: 1.2rem;
+    background: linear-gradient(145deg, #000000, #1a1a3a);
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #eee;
+    cursor: pointer;
+}
+
+/* Optional: Add a hover effect */
+.form-container input[type="date"]:hover {
+    background-color: #444;
+    border-color: #fff;
+}
+
+/* Optional: Add focus effect for better user interaction */
+.form-container input[type="date"]:focus {
+    background-color: #333;
+    border-color: #4db8ff;
+    outline: none;
+}
